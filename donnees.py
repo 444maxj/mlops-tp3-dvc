@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 
@@ -45,6 +46,8 @@ df = pd.DataFrame({
     "nuit": nuit,
     "fraude": fraude
 })
+
+os.makedirs("data", exist_ok=True)
 
 df.to_csv(
     "data/transactions.csv",
